@@ -1,0 +1,14 @@
+
+<li [ngStyle]="{color: getColor()}" [ngClass]="{'list-group-item': true,
+            'list-group-item-success': post_loveIts > 0,
+            'list-group-item-danger': post_loveIts < 0 }"
+            >
+    <div style=" display: flex; justify-content: space-between;"> <h2> {{post_title}} </h2>
+     <p >{{post_created_at | date: 'short' |uppercase}} </p> 
+    </div>
+    <p> {{post_content}} </p>
+
+<button class="btn btn-success" (click)="getUp()">Love It!</button>
+&nbsp;&nbsp;&nbsp;
+<button class="btn btn-danger" (click)="getDown()">Don't Love It!</button>
+</li>    
